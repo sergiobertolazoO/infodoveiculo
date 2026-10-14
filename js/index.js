@@ -184,7 +184,7 @@ function updateUIAfterLogin() {
     const navbarNav = document.querySelector(".navbar-nav");
     const projetosMenuItem = document.createElement("li");
     projetosMenuItem.className = "nav-item";
-    projetosMenuItem.innerHTML = `<a id="projetoNav" class="nav-link" href="#projeto">Projetos</a>`;
+    projetosMenuItem.innerHTML = `<a id="projetoNav" class="nav-link" onclick="listaProjetos();">Troca de Oleo</a>`;
     navbarNav.appendChild(projetosMenuItem);
 
     // Exibir a seção "Projetos"

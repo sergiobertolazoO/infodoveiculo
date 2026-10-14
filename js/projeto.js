@@ -16,7 +16,7 @@
                     projectList.innerHTML = ""; // Limpa a lista
         
                     if (projects.length === 0) {
-                        projectList.innerHTML = '<p class="text-center">Nenhum projeto encontrado. Clique em "Criar Projeto" para adicionar um novo.</p>';
+                        projectList.innerHTML = '<p class="text-center">Nenhuma informação encontrada. Clique em "Cadastrar Troca de Oleo" para adicionar novas informações.</p>';
                         return;
                     }
         
@@ -58,9 +58,9 @@
                         li.className = "list-group-item d-flex justify-content-between align-items-center";
                         li.innerHTML = `
                             <div>
-                                <h5>${project.name}</h5>
-                                <p>Tipo: ${project.type}</p>
-                                <p>Início: ${project.startDate} | Término: ${project.endDate}</p>
+                                <h5>Descrição do Veiculo: ${project.name}</h5>
+                                <p>Troca do Filtro: ${project.type}</p>
+                                <p>Data da Troca: ${project.startDate} | Proxima Troca: ${project.endDate}</p>
                             </div>
                             <button class="btn btn-danger btn-sm" onclick="deleteProject(${project.id})">Excluir</button>
                         `;
@@ -115,7 +115,7 @@
 
                             if (projects.length === 0) {
                         
-                                projectList.innerHTML = '<p class="text-center">Nenhum projeto encontrado.</p>';
+                                projectList.innerHTML = '<p class="text-center">Nenhuma informação encontrada.</p>';
                                 return;
                             }
                         

@@ -20,7 +20,7 @@
                         <a class="nav-link active" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="projeto.html">Projetos</a>
+                        <a class="nav-link" href="projeto.html">Troca de Oleo</a>
                     </li>
                 </ul>
                 <button id="logoutBtn" class="btn right-btn" onclick="logout()" >Logout</button>
@@ -29,16 +29,16 @@
     </nav>
 
     <main class="container my-5">
-        <h1 class="text-center mb-4">Seus Projetos</h1>
+        <h1 class="text-center mb-4">Informações do Veiculo</h1>
 
         <!-- Lista de Projetos -->
         <div id="projectList" class="mb-4">
-            <p class="text-center">Nenhum projeto encontrado. Clique em "Criar Projeto" para adicionar um novo.</p>
+            <p class="text-center">Marcar informações Troca de Oleo.</p>
         </div>
 
         <!-- Botão para criar novo projeto -->
         <div class="text-center">
-            <button id="createProjectButton" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal">Criar Novo Projeto</button>
+            <button id="createProjectButton" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal">Cadastrar informações do Veiculo</button>
         </div>
     </main>
 
@@ -47,33 +47,42 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="projectModalLabel">Criar Novo Projeto</h5>
+                    <h5 class="modal-title" id="projectModalLabel">Marcação Troca de Oleo</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form id="projectForm">
                         <div class="mb-3">
-                            <label for="projectName" class="form-label">Nome do Projeto</label>
-                            <input type="text" class="form-control" id="projectName" placeholder="Digite o nome do projeto" required>
+                            <label for="projectName" class="form-label" style="color: black;">Descrição do Veiculo</label>
+                            <input type="text" class="form-control" id="projectName" placeholder="Descrição do Veiculo" required>
                         </div>
+
                         <div class="mb-3">
-                            <label for="projectType" class="form-label">Tipo do Projeto</label>
-                            <select class="form-select" id="projectType" required>
-                                <option value="" disabled selected>Selecione</option>
-                                <option value="Estratégico">Estratégico</option>
-                                <option value="Tático">Tático</option>
-                                <option value="Operacional">Operacional</option>
-                            </select>
+                            <label class="form-label" style="color: black;">KM</label>
+                            <input type="text" class="form-control" id="km" placeholder="Kilometragem" required>
                         </div>
+
+                        
                         <div class="mb-3">
-                            <label for="startDate" class="form-label">Data de Início</label>
+
+                            <label for="startDate" class="" style="color: black;">Data da Troca</label>
                             <input type="date" class="form-control" id="startDate" required>
                         </div>
                         <div class="mb-3">
-                            <label for="endDate" class="form-label">Data de Término</label>
+                            <label for="endDate" class="form-label" style="color: black;">Proxima Troca</label>
                             <input type="date" class="form-control" id="endDate" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Salvar Projeto</button>
+
+                        <div class="mb-3">
+                            <label for="projectType" class="form-label" style="color: black;">Filtro de Oleo?</label>
+                            <select class="form-select" id="projectType" required>
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option> 
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Salvar Informações</button>
                     </form>
                 </div>
             </div>

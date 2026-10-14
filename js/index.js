@@ -113,7 +113,8 @@ function registerUser(username, password) {
             userStore.add({ username, password: hashedPassword });
 
             transaction.oncomplete = () => {
-                alert("Usuário cadastrado com sucesso!");
+                login(username,password);
+                
             };
 
             transaction.onerror = () => {
@@ -151,6 +152,8 @@ function login(username, password) {
                 loggedInUser = username; // Define o usuário logado
                 localStorage.setItem("loggedInUser", username); // Salva o usuário logado no localStorage
                 updateUIAfterLogin();
+
+                listaProjetos()
             } else {
                 alert("Senha incorreta!");
             }

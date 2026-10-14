@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light menu-fixo">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Passo a Passo</a>
+            <a class="navbar-brand" href="#">Informações do Veiculo/a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -37,7 +37,7 @@
             <p class="lead">Clique abaixo para consultar/cadastrar informações do seu veiculo!</p>
        
             <button id="loginModalButton" class="btn btn-primary right-btn" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
-            <button id="cadastreseModalButton" class="btn" data-bs-toggle="modal" data-bs-target="#registerModal">Cadastre-se</button>
+            <button id="cadastreseModalButton" class="btn" data-bs-toggle="modal" style="color: white;" data-bs-target="#registerModal">Cadastre-se</button>
        
        
         </div>
@@ -59,12 +59,7 @@
         </section>
 
 
-        <section id="sobre" class="bg-light">
-            <div class="container text-center">
-                <h2>Sobre o Projeto</h2>
-                <p>O projeto "Passo a Passo" foi criado para ajudar você a organizar e alcançar suas metas de forma eficiente e prática.</p>
-            </div>
-        </section>
+     
 
        <!--  <section id="apresentacao" class="bg-secondary text-white">
             <div class="container text-center">
@@ -171,7 +166,9 @@ document.getElementById("registerForm").addEventListener("submit", function (eve
     const registerModal = bootstrap.Modal.getInstance(document.getElementById("registerModal"));
     registerModal.hide();
 
-    login(username, password);
+    //login(username, password);
+
+   
 });
 
 // Evento de envio do formulário de login
